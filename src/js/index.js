@@ -161,7 +161,7 @@ export default function Tobii (userOptions) {
     const uniqueMap = []
     LIGHTBOX_TRIGGER_ELS.forEach((lightboxTriggerEl) => {
       const group = lightboxTriggerEl.hasAttribute('data-group') ? lightboxTriggerEl.getAttribute('data-group') : 'default'
-      let uid = lightboxTriggerEl.href
+      let uid = lightboxTriggerEl.dataset.photo || lightboxTriggerEl.href
       if (lightboxTriggerEl.hasAttribute('data-target')) {
         uid = lightboxTriggerEl.getAttribute('data-target')
       }
